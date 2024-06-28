@@ -1,0 +1,348 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+/*Variables*/
+
+:root{
+  --font-family: "Roboto", sans-serif;
+  --normal-font: 400;
+  --bold-font: 700;
+  --bolder-font: 900;
+  --bg-color: #fcfcfc;
+  --primary-color: #4756df;
+  --secondary-color: #ff7235;
+  --primay-shadow: #8b8eaf;
+  --secondary-shadow: #a17a69;
+  --bottom-margin: 0.5rem;
+  --bottom-margin-2: 1rem;
+  --line-height: 1.7rem;
+  --transition: 0.3s;
+}
+/*Fin de las variables*/
+
+html{
+    scroll-behavior: smooth; /*es como hacer el efecto de poner el cursor encima se desplaze de manera suabe y que no sea como tan agresivo o rapido*/
+}
+
+/*CSS Resets*/
+*{  
+    margin: 0;
+    padding: 0; /*un espacio alrededor de nuestro contenido*/
+    box-sizing: border-box;
+}
+
+ul{
+    list-style-type: none; 
+    /*para eliminar el marcador de la lista osea eliminar el puntito que hace que sea una lista*/
+
+}
+
+a{
+    text-decoration: none; /*para dejar el subrayado de la palabra, no modificarlo*/
+    color: var(--primary-color);
+}
+
+a:hover{
+    color: var(--secondary-color);
+}
+
+body{
+    font-family: var(--font-family); /*es para establecer una tipografia al contenido*/
+}
+
+/*NavBar*/
+
+nav{ /*una sección que servira como un enlaces, como para abrir otra pag*/
+    position: sticky; /*establecer una posición fija de nuestra barra de navegación sin importar donde este nuestro cursor*/
+    top:0;
+    left: 0;
+    z-index: 1; /*controlar la superposición, osea decidir que aparece primero o delante*/
+    display: flex; /*capacidad que adquiere para que nosotros lo podamos mover*/
+    align-items: center;
+    justify-content: space-between; /*justificarlo, distrubyendo el espacio somre su contenido de manera igualitaria*/
+    padding: 1.5rem 3.5rem; /*espacio que rodea directamente al contenido*/
+    background-color: var(--bg-color);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /*dar efectos de sombra a nuestro cuadro de contenido, asi como el enfoque o dispersión que va a tener la sombra*/
+}
+
+nav h1{
+    color: var(--primary-color);
+}
+
+nav a{
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+nav a:hover{  /*cambia de color cuando pasamos el cursos por encima*/
+    border-bottom: 2px solid var(--secondary-color); 
+}
+
+nav ul{
+    display: flex;
+    gap: 1.9rem; /*crear un espacio entre nuestros elemento para que no se vea achocado o sobrepuesto*/
+}
+
+nav ul li{
+    font-weight: var(--bold-font); /*grueso de la letra*/
+}
+
+
+/*Esconder botón de hamburguesa*/
+
+.burger-menu{
+    color: var(--primary-color);
+    font-size: 2rem;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer; /*cambiar el puntero a la manita*/
+    display: none; /*un elemento oculto*/
+}
+
+/*Fin de NavBar*/
+
+/*Inicio de hero*/
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem; /*crear un espacio entre nuestros elemento para que no se vea achocado o sobrepuesto*/
+    max-width: 68.75rem; /*es para poner un ancho a un elemento*/
+    margin: auto;
+}
+
+.hero img{
+    height: 30rem; /*altura*/
+    width: 25rem; /*ancho*/
+}
+
+.bio{
+    width: 19rem;
+    padding: 0.625rem;
+    box-shadow: 0px 2px 15px 2px var(--primay-shadow);
+    border-radius: 8px;
+}
+
+.bio h1{
+    margin-bottom: var(--bottom-margin);
+}
+
+.bio p{
+    line-height: var(--line-height);
+    padding: 0.3rem 0;
+}
+
+/*About me*/
+.more-about{
+    background-color: var(--bg-color);
+    padding: 1rem 6rem;
+}
+
+.more-about h2{
+    margin-bottom: var(--bottom-margin);
+    text-align: center;
+}
+
+.more-about p{
+    line-height: var(--line-height);
+    padding: 0.4rem;
+    text-align: center;
+}
+
+/*Skill section*/
+.skills{
+    max-width: 68.75rem;
+    margin: auto;
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+.skill-header{
+    margin-bottom: 1rem;
+}
+
+.skills-wrapper img{
+    padding: 1.25rem;
+}
+
+.icon{
+    width: 11.875rem;
+    height: 11.25rem;
+}
+
+.icon-card{
+    background-color: #ffff;
+    box-shadow: 0 3px 10px var(--secondary-shadow);
+    border-radius: 11px;
+    padding: 20px;
+    margin: 10px;
+}
+
+/*Projects Section*/
+.projects{
+    background-color:var(--bg-color);
+    padding: 32px 0;
+    margin-top: 2rem;
+}
+
+.project-pic{
+    width: 20%;
+    height: 40%;
+}
+
+.projects-container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects-title{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.project-container{
+    text-align: center;
+    width: 21.875rem;
+    padding: 1rem;
+}
+
+.projects-container p{
+    padding: 0.4rem;
+}
+
+.project-title{
+    margin-bottom: var(--bottom-margin);
+}
+
+.project-details{
+    margin-bottom: var(--bottom-margin);
+}
+
+.project-card{
+    background-color: #fff;
+    box-shadow: 0 3px 10px var(--primary-color);
+    border-radius: 15%;
+    padding: 20px;
+    margin: 15px;
+}
+
+.socials{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 1%;
+    bottom: 50%;
+}
+
+.socicon{
+    width: 3rem;
+    height: 3.5rem;
+}
+
+footer{
+    background-color: var(--bg-color);
+    padding:1.25rem;
+    text-align: center;
+    margin: 2rem 0 0;
+}
+
+/*Scroll button*/
+.scroll-up{
+    position: fixed;
+    right:0.5%;
+    bottom: 3%;
+    cursor: pointer;
+}
+
+.up-arrow{
+    width:3rem;
+    height: 3rem;
+}
+
+/*Media queries for responsiveness*/
+@media screen and (max-width: 720px){
+nav{
+    padding:1.5rem 1rem;
+}
+
+nav ul{
+    position: fixed;
+    background-color: var(--bg-color);
+    flex-direction: column;
+    top: 86px;
+    left: 10%;
+    width: 80%;
+    text-align: center;
+    transform: translateX(120%);
+    transition: transform 0.5s ease-in;
+}
+
+nav ul li{
+    margin: 8px;
+}
+
+.burger-menu{
+    display: block;
+}
+
+nav ul.show{
+    transform: translateX(0);
+}
+
+.hero{
+    margin-top: -4rem;
+    flex-direction: column;
+    gap: 0;
+}
+
+.hero img{
+    height: 25rem;
+    width: 22rem;
+}
+
+.bio{
+    margin-top: 3rem;
+    width: 20.5rem;
+}
+
+.more-about{
+    margin-top: 2rem;
+    padding: 1rem 3.5rem;
+}
+
+.more-about h2{
+    text-align: center;
+}
+
+.more-about p{
+    text-align: justify;
+}
+
+.icon{
+    width: 5.875rem;
+    height: 5.25rem;
+}
+
+.projects-container{
+    flex-direction: column;
+}
+
+.project-container{
+    width: 20.875rem;
+}
+
+}
+
+@media screen and (max-width: 420px){
+    .hero img{
+
+    }
+
+    .bio{
+        width: 18.3rem;
+    }
+
+    .project-container{
+        width: 17.875rem;
+    }
+}
