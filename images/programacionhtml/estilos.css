@@ -1,0 +1,76 @@
+body{
+    background-color: #c4d3e8;
+    color: #212126; 
+    font-family: "Merriweather", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+header{
+    background-color: #5a495d;
+    color:azure;
+    text-align:center; 
+}
+
+img{
+  width: 190px;
+}
+
+header h1{
+    font-size: 40px;
+    padding-top: 15px;
+}
+
+header h2{
+    font-size: 30px;
+    padding-bottom:20px; 
+}
+main{
+    padding: 30px;
+}
+
+p{
+    text-align:center
+}
+
+h3{
+    text-align: center;
+}
+
+ul{
+    list-style-type:none;
+    padding: 0;
+}
+
+ul li{
+    display: inline;
+    margin-right: 30px;
+}
+
+#redessociales {
+    text-align: center;
+}
+#redessociales a{
+    color: rgb(11, 78, 78);
+}
+
+#redessociales a:hover{
+    color: rgba(228, 56, 248, 0.597);
+}
+
+#multimedia{
+    text-align: center;
+}
+
+footer{
+   background-color:rgb(69, 46, 15); 
+   color: rgb(212, 175, 239);
+}
+
+footer a{
+    color: #c4d3e8;
+}
+footer a:hover{
+    color: aqua;
+}
+
